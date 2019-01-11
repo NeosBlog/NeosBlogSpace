@@ -9,6 +9,5 @@ prototype(NeosBlogSpace.Site:Document.AbstractPage) < prototype(Neos.Neos:Page) 
 	}
 	body = NeosBlogSpace.Site:Component.DefaultLayout {
 		content = ''
-		@process.normalize = CodeQ.UnicodeNormalizer:Normalizer
 	}
 }
