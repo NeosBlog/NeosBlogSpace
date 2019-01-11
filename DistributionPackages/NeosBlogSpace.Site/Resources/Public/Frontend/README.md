@@ -1,3 +1,0 @@
-# Frontend
-
-_YOUR FRONTEND FILES HERE_

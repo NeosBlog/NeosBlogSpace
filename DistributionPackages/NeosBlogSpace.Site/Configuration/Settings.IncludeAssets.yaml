@@ -13,6 +13,6 @@ Carbon:
         # Asset files who get's loaded in live and backend view
         General:
           Head:
-            - index.css
+            - index.min.css
           Body:
-            - index.js
+            - index.min.js

@@ -5,7 +5,7 @@ prototype(NeosBlogSpace.Site:Component.Header) < prototype(Neos.Fusion:Component
 
 	renderer = afx`
 		<header class="main-header">
-			<a class="logo" href={props.homeLink}>BRAND NAME</a>
+			<a class="logo" href={props.homeLink}>NeosBlogSpace</a>
 			<NeosBlogSpace.Site:Component.Navigation startingPoint={site} />
 		</header>
 	`
