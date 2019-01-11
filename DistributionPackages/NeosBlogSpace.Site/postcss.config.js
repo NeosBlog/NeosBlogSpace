@@ -1,3 +1,5 @@
+const styles = require('./Resources/Private/JavaScript/styleConstants');
+
 module.exports = {
     plugins: [
         require('autoprefixer'),
@@ -5,7 +7,7 @@ module.exports = {
             discardComments: { removeAll: true },
         }),
         require('postcss-css-variables')({
-            variables: {}
+            variables: Object.assign(styles.styles)
         }),
         require('postcss-import')(),
         require('postcss-nested')(),
