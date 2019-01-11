@@ -7,7 +7,6 @@
         "neos/neos-ui": "^1.4",
         "neos/neos-ui-compiled": "^1.4",
         "neos/fusion-afx": "^1.0",
-        "neos/googleanalytics": "^2.0",
         "neos/redirecthandler-neosadapter": "^2.0",
         "neos/redirecthandler-databasestorage": "^3.0",
         "neos/seo": "^2.1",
