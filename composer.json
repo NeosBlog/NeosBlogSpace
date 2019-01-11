@@ -1,0 +1,27 @@
+{
+    "name": "neosblogspace",
+    "description": "A Neos blog based on neos",
+    "config": {
+        "vendor-dir": "Packages/Libraries",
+        "bin-dir": "bin"
+    },
+    "require": {
+        "neosblogspace/site": "@dev",
+        "breadlesscode/neos-blog": "^1.3"
+    },
+    "require-dev": {
+        "ttree/eelshell": "@dev"
+    },
+    "repositories": {
+        "distribution": {
+            "type": "path",
+            "url": "./DistributionPackages/*"
+        }
+    },
+    "scripts": {
+        "post-update-cmd": "Neos\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
+        "post-install-cmd": "Neos\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
+        "post-package-update": "Neos\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall",
+        "post-package-install": "Neos\\Flow\\Composer\\InstallerScripts::postPackageUpdateAndInstall"
+    }
+}

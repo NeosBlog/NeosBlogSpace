@@ -1,0 +1,9 @@
+prototype(NeosBlogSpace.Site:Component.DefaultLayout) < prototype(Neos.Fusion:Component) {
+	content = ''
+
+	renderer = afx`
+		<NeosBlogSpace.Site:Component.Header />
+		{props.content}
+		<NeosBlogSpace.Site:Component.Footer />
+	`
+}

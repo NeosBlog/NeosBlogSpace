@@ -1,0 +1,7 @@
+'NeosBlogSpace.Site:Document.Page':
+  superTypes:
+    'NeosBlogSpace.Site:Document.AbstractPage': true
+  ui:
+    label: i18n
+    icon: icon-file-o
+    position: 100

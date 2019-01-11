@@ -1,0 +1,22 @@
+'NeosBlogSpace.Site:Document.AbstractPage':
+  abstract: true
+  superTypes:
+    'Neos.Neos:Document': true
+  childNodes:
+    main:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'NeosBlogSpace.Site:Constraint.Content.Restricted': false
+  constraints:
+    nodeTypes:
+      'NeosBlogSpace.Site:Document.HomePage': false
+      'NeosBlogSpace.Site:Constraint.Document.Restricted': false
+  properties:
+    hideFromMainMenu:
+      type: boolean
+      ui:
+        label: i18n
+        reloadPageIfChanged: true
+        inspector:
+          group: visibility
