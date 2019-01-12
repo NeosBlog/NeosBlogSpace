@@ -1,3 +1,5 @@
+@import 'typografie.css';
+
 /**
  * This styles provide a very basic layout.
  * It's recommended to replace this with your own frontend tooling.
@@ -7,7 +9,6 @@
 	margin: 0;
 	padding: 0;
 
-	font-family: var(--fontsBase-Family), sans-serif;
 	font-weight: var(--fontsBase-CssWeight);
 	font-size: var(--fontSize-Base);
 	color: var(--colors-PrimaryGray);
