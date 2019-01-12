@@ -1,0 +1,26 @@
+/**
+ * This styles provide a very basic layout.
+ * It's recommended to replace this with your own frontend tooling.
+ */
+ body {
+	margin: 0;
+	padding: 0;
+
+	font-weight: var(--fontsBase-CssWeight);
+	font-size: var(--fontSize-Base);
+	color: var(--colors-PrimaryGray);
+}
+
+/*
+ * Main Content Layout
+ */
+.main {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 0.5rem;
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}

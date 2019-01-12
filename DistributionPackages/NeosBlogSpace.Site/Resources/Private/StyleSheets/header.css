@@ -1,0 +1,19 @@
+@import 'typografie.css';
+@import 'navigation.css';
+
+/**
+ * Header Layout
+ */
+.main-header {
+    padding: 1rem 1.2rem;
+    background: var(--colors-White);
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 1px 10px -6px rgba(0,0,0,0.42),0 1px 10px 0 rgba(0,0,0,0.12),0 4px 5px -2px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-family: 'Roboto';
+    color: var(--colors-PrimaryGray);
+    text-decoration: none;
+}

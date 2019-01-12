@@ -1,0 +1,18 @@
+/**
+ * Footer Layout
+ */
+.main-footer {
+	padding: 1rem 1.2rem;
+	background: var(--colors-PrimaryBlue);
+	display: flex;
+	justify-content: space-between;
+
+	a {
+		color: black;
+	}
+
+	.neos-inline-editable.placeholder {
+		color: black;
+		font-style: italic;
+	}
+}

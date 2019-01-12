@@ -1,0 +1,35 @@
+.navigation {
+	display: flex;
+	margin: 0;
+	padding-left: 0;
+	list-style: none;
+}
+
+.navigation-item {
+	position: relative;
+	display: inline-block;
+}
+
+.navigation-link {
+	color: var(--colors-PrimaryGray);
+	padding-left: 0.5rem;
+	text-decoration: none;
+}
+
+.navigation-item--level-1 {
+    .navigation-level {
+        /* show level 2 on hover, don't got past level 2 */
+        display: none;
+    }
+
+    &:active .navigation-level--level-2,
+    &:hover .navigation-level--level-2,
+    &:focus .navigation-level--level-2 {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        display: block;
+        padding: 0.5rem;
+        background: var(--colors-PrimaryBlue);
+    }
+}
