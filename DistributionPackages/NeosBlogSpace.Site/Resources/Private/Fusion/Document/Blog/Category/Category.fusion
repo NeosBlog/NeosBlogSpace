@@ -1,0 +1,8 @@
+prototype(Breadlesscode.Blog:Document.Tag) >
+prototype(Breadlesscode.Blog:Document.Tag) < prototype(NeosBlogSpace.Site:Document.AbstractPage) {
+	body.content = afx`
+      <main class="main blog-tag">
+        <Breadlesscode.Blog:Component.PostList.Tag />
+      </main>
+    `
+}

@@ -1,0 +1,14 @@
+prototype(Breadlesscode.Blog:Document.Author) >
+prototype(Breadlesscode.Blog:Document.Author) < prototype(NeosBlogSpace.Site:Document.AbstractPage) {
+   
+    body.content = Neos.Fusion:Component {
+        authorUser = ${ q(documentNode).property('user') }
+        headline = ${ q(documentNode).property('title') }
+
+        renderer = afx`
+          <main class="main blog-author">
+            <Breadlesscode.Blog:Component.PostList.Author author={ props.authorUser } headline={ props.headline } />
+          </main>
+    	`
+	}
+}

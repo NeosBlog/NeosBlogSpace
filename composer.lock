@@ -53,16 +53,16 @@
         },
         {
             "name": "breadlesscode/neos-blog",
-            "version": "v2.0.2",
+            "version": "v2.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/breadlesscode/neos-blog.git",
-                "reference": "9a69c0596c25d381abe5c0c205ad7695dfef36fc"
+                "reference": "4b1ca6d2562d84746601c5c72a56be03f2b89faa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/breadlesscode/neos-blog/zipball/9a69c0596c25d381abe5c0c205ad7695dfef36fc",
-                "reference": "9a69c0596c25d381abe5c0c205ad7695dfef36fc",
+                "url": "https://api.github.com/repos/breadlesscode/neos-blog/zipball/4b1ca6d2562d84746601c5c72a56be03f2b89faa",
+                "reference": "4b1ca6d2562d84746601c5c72a56be03f2b89faa",
                 "shasum": ""
             },
             "require": {
@@ -106,7 +106,7 @@
                 "plugin",
                 "tags"
             ],
-            "time": "2019-06-12 11:28:27"
+            "time": "2019-06-12 14:47:35"
         },
         {
             "name": "breadlesscode/neos-commentable",

@@ -1,0 +1,8 @@
+prototype(Breadlesscode.Blog:Document.Post) >
+prototype(Breadlesscode.Blog:Document.Post) < prototype(NeosBlogSpace.Site:Document.AbstractPage) {
+    body.content = afx`
+        <main class="main">
+            <Neos.Neos:ContentCollection nodePath="main" />
+        </main>
+        `
+}

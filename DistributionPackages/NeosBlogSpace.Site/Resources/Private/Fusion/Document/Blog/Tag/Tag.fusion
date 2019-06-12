@@ -1,0 +1,8 @@
+prototype(Breadlesscode.Blog:Document.CategoryBlog) >
+prototype(Breadlesscode.Blog:Document.CategoryBlog) < prototype(NeosBlogSpace.Site:Document.AbstractPage) {
+    body.content = afx`
+      <main class="main blog-category">
+        <Breadlesscode.Blog:Component.PostList.Category />
+      </main>
+    `
+}
