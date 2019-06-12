@@ -1,3 +1,9 @@
 ###
 ## Add your overrides to 3rd party fusion code here
 ###
+
+prototype(Breadlesscode.Blog:Component.PostList.Item) {
+	excerpt = NeosBlogSpace.Site:Helper.Truncate {
+		document = ${ item }
+	}
+}

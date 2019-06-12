@@ -1,0 +1,26 @@
+prototype(NeosBlogSpace.Site:Helper.Truncate) < prototype(Neos.Fusion:Value) {
+	document = ${ documentNode }
+	maxWords = 120
+
+	@context{
+		document = ${ this.document }
+		maxWords = ${ this.maxWords }
+	}
+
+	value = Neos.Fusion:Case {
+		hasExcerpt {
+			condition = ${ q(document).property('excerpt') }
+			renderer = ${ q(document).property('excerpt') }
+		}
+		extractTextFromNodeType {
+			condition = ${ !q(document).property('excerpt') }
+			renderer = Neos.Fusion:Value {
+				value = ${ q(document).find('[instanceof NeosBlogSpace.Site:Content.Text]').get(0) }
+				value.@process {
+					getText = ${ q(value).property('text') }
+					stripTags = ${ String.pregReplace(value, '#<[^>]+>#', ' ') }
+					cropText = ${ String.cropAtWord(value, maxWords, '…') }
+				}
+		}
+	}
+}
