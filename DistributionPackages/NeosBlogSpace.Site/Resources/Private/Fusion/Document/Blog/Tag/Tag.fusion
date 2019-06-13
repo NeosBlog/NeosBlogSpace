@@ -1,8 +1,15 @@
-prototype(Breadlesscode.Blog:Document.CategoryBlog) >
-prototype(Breadlesscode.Blog:Document.CategoryBlog) < prototype(NeosBlogSpace.Site:Document.AbstractPage) {
-    body.content = afx`
-      <main class="main blog-category">
-        <Breadlesscode.Blog:Component.PostList.Category />
-      </main>
-    `
+prototype(Breadlesscode.Blog:Document.Tag) >
+prototype(Breadlesscode.Blog:Document.Tag) < prototype(NeosBlogSpace.Site:Document.AbstractPage) {
+    body.content = Neos.Fusion:Component {
+        headline = ${ q(documentNode).property('title') }
+		postList = Breadlesscode.Blog:Component.PostList {
+			auhtor = ${ q(site).find('[instanceof Breadlesscode.Blog:Document.Post]').filterByTags([ documentNode ]).get() }
+		}
+        renderer = afx`
+          <main class="main blog-category">
+		  	<h1>{ props.headline }</h1>
+			{props.postList}
+          </main>
+    	`
+	}
 }

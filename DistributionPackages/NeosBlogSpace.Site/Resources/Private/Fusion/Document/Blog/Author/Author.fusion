@@ -2,12 +2,14 @@ prototype(Breadlesscode.Blog:Document.Author) >
 prototype(Breadlesscode.Blog:Document.Author) < prototype(NeosBlogSpace.Site:Document.AbstractPage) {
    
     body.content = Neos.Fusion:Component {
-        authorUser = ${ q(documentNode).property('user') }
         headline = ${ q(documentNode).property('title') }
-
+		postList = Breadlesscode.Blog:Component.PostList {
+			sollection = ${ q(site).find('[instanceof Breadlesscode.Blog:Document.Post]').filterByAuthor(q(documentNode).property('user')).get() }
+		}
         renderer = afx`
           <main class="main blog-author">
-            <Breadlesscode.Blog:Component.PostList.Author author={ props.authorUser } headline={ props.headline } />
+		  	<h1>{ props.headline }</h1>
+			{props.postList}
           </main>
     	`
 	}
