@@ -3,11 +3,11 @@ prototype(Breadlesscode.Blog:Document.Tag) < prototype(NeosBlogSpace.Site:Docume
     body.content = Neos.Fusion:Component {
         headline = ${ q(documentNode).property('title') }
 		postList = Breadlesscode.Blog:Component.PostList {
-			auhtor = ${ q(site).find('[instanceof Breadlesscode.Blog:Document.Post]').filterByTags([ documentNode ]).get() }
+			collection = ${ q(site).find('[instanceof Breadlesscode.Blog:Document.Post]').filterByTags([ documentNode ]).get() }
 		}
         renderer = afx`
           <main class="main blog-category">
-		  	<h1>{ props.headline }</h1>
+		  	<h1>{ props.headline }</h1>assd
 			{props.postList}
           </main>
     	`
