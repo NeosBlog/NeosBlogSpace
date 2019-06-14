@@ -1,8 +1,20 @@
 prototype(Breadlesscode.Blog:Document.Post) >
 prototype(Breadlesscode.Blog:Document.Post) < prototype(NeosBlogSpace.Site:Document.AbstractPage) {
-    body.content = afx`
-        <main class="main">
+    body.content = Neos.Fusion:Component {
+		headerImageUri = Neos.Neos:ImageUri {
+			asset = ${ q(documentNode).property('headerImage') }
+			width = 800
+			height = 180
+			allowCropping = TRUE
+			allowUpScaling = TRUE
+		}
+		renderer =  afx`
+		  <header style="max-width: 800px;margin: 0 auto;">
+			<img src={props.headerImageUri} />
+		  </header>
+          <main class="main">
             <Neos.Neos:ContentCollection nodePath="main" />
-        </main>
+          </main>
         `
+	}
 }

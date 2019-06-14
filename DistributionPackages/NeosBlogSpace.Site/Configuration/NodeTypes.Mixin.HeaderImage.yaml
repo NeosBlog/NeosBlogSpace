@@ -1,0 +1,17 @@
+'NeosBlogSpace.Site:Mixin.HeaderImage':
+  abstract: true
+  ui:
+    inspector:
+      groups:
+        image:
+          label: 'Image'
+          position: 5
+          icon: 'icon-image'
+  properties:
+    headerImage:
+      type: Neos\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Header Image'
+        reloadIfChanged: true
+        inspector:
+          group: 'document'

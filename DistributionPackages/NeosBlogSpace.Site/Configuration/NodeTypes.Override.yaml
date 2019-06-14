@@ -18,3 +18,4 @@
 'Breadlesscode.Blog:Document.Post':
   superTypes:
     'NeosBlogSpace.Site:Mixin.HiddenInMenu': true
+    'NeosBlogSpace.Site:Mixin.HeaderImage': true

@@ -6,4 +6,31 @@ prototype(Breadlesscode.Blog:Component.PostList.Item) {
 	excerpt = NeosBlogSpace.Site:Helper.Truncate {
 		document = ${ item }
 	}
+	postUri = Neos.Neos:NodeUri {
+		node = ${ documentNode }
+	}
+	headline = ${ q(item).property('title') }
+	imageUri = Neos.Neos:ImageUri {
+		asset = ${ q(item).property('headerImage') }
+		width = 200
+		height = 120
+		allowCropping = TRUE
+		allowUpScaling = TRUE
+	}
+
+	renderer = afx`
+		<article style="display: flex;margin-top: 2rem;">
+			<div style="width: 200px;height: 120px">
+				<a href={ props.postUri }>
+					<img
+						src={ props.imageUri }
+						style="border-radius: 0.5rem;box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);" />
+				</a>
+			</div>
+			<div style="padding-left: 1.5rem">
+				<h2><a href={ props.postUri }>{ props.headline }</a></h2>
+				<p>{ props.excerpt }</p>
+			</div>
+		</article>
+	`
 }
