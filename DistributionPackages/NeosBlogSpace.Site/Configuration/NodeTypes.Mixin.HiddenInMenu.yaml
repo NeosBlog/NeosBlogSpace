@@ -1,0 +1,5 @@
+'NeosBlogSpace.Site:Mixin.HiddenInMenu':
+  abstract: true
+  properties:
+    _hiddenInIndex:
+      defaultValue: true

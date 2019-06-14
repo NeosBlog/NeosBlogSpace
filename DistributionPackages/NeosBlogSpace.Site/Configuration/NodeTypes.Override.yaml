@@ -2,3 +2,19 @@
 # We do not need this, since we have no custom controllers
 'Neos.Neos:PluginView':
   abstract: true
+
+'Breadlesscode.Blog:Document.CategoryBlog':
+  superTypes:
+    'NeosBlogSpace.Site:Mixin.HiddenInMenu': true
+
+'Breadlesscode.Blog:Document.Tag':
+  superTypes:
+    'NeosBlogSpace.Site:Mixin.HiddenInMenu': true
+
+'Breadlesscode.Blog:Document.Author':
+  superTypes:
+    'NeosBlogSpace.Site:Mixin.HiddenInMenu': true
+
+'Breadlesscode.Blog:Document.Post':
+  superTypes:
+    'NeosBlogSpace.Site:Mixin.HiddenInMenu': true
